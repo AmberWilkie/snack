@@ -1,14 +1,15 @@
 class Event < ActiveRecord::Migration[5.0]
   def change
-    create_table :products do |t|
+    create_table :events do |t|
       t.string :name
       t.text :description
       t.datetime :date
-      t.location :string
-      t.category :string
-      t.tags :string
-      t.link :string
+      t.string :location
+      t.string :category
+      t.string :tags
+      t.string :link
 
       t.timestamps
+    end
   end
 end
