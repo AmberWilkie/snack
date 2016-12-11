@@ -4,6 +4,8 @@ Given(/^I am on the "([^"]*)" page$/) do |page|
       visit events_path
     when "user registration"
       visit new_user_registration_path
+    when "login"
+      visit new_user_session_path
   end
 end
 
