@@ -31,5 +31,7 @@ module RailsScaffold
      generate.routing_specs false
      generate.controller_specs false
     end
+
+    config.encoding = "utf-8"
   end
 end
