@@ -1,7 +1,9 @@
 Given(/^I am on the "([^"]*)" page$/) do |page|
   case page
     when "events"
-      visit '/events'
+      visit events_path
+    when "user registration"
+      visit new_user_registration_path
   end
 end
 
@@ -19,4 +21,8 @@ end
 
 And(/^I should not see "([^"]*)"$/) do |content|
   expect(page).not_to have_content content
+end
+
+Then(/^show me the page$/) do
+  save_and_open_page
 end
