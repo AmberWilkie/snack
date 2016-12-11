@@ -5,3 +5,8 @@ end
 Given(/^there is a user "([^"]*)"$/) do |email|
   user = FactoryGirl.create(:user, email: email)
 end
+
+Given(/^I am logged in as "([^"]*)"$/) do |email|
+  user = User.find_by(email: email)
+  login_as(user)
+end

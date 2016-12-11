@@ -18,3 +18,9 @@ Feature: User registration and login
     And I fill in "Password" with "password"
     And I click "Log in"
     Then I should see "Signed in successfully."
+
+    Scenario: I log out
+      Given I am logged in as "random@email.com"
+      When I am on the "events" page
+      And I click "Log out"
+      Then I should see "Signed out successfully."
